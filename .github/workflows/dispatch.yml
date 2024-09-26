@@ -18,4 +18,4 @@ jobs:
         with:
           script: |
             const script = await import('${{ github.workspace }}/src/index.js');
-            await script({ APP_ID: process.env.APP_ID, PRIVATE_KEY: process.env.PRIVATE_KEY });
+            await script.main({ APP_ID: process.env.APP_ID, PRIVATE_KEY: process.env.PRIVATE_KEY });

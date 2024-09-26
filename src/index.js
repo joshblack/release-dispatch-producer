@@ -1,7 +1,7 @@
 import { App, Octokit } from "octokit";
 import core from "@actions/core";
 
-export default async function main({ APP_ID, PRIVATE_KEY }) {
+export async function main({ APP_ID, PRIVATE_KEY }) {
   const app = new App({
     appId: APP_ID,
     privateKey: PRIVATE_KEY,
