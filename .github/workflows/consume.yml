@@ -1,0 +1,12 @@
+name: Consume
+on:
+  repository_dispatch:
+    types: [ping]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo $MESSAGE
