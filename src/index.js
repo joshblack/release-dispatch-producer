@@ -35,7 +35,8 @@ export async function main({ APP_ID, PRIVATE_KEY }) {
         `✅  Event dispatched successfully for ${repoUrl} (id: ${repository.id})`,
       );
     } catch (error) {
-      core.warning("Dispatch error:", error);
+      console.log(error);
+      core.warning("Dispatch error");
     }
   });
 }
