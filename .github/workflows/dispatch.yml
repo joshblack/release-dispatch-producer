@@ -14,7 +14,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
           script: |
-            const { App, Octokit } = require('octokit');
+            const { App, Octokit } = await import('octokit');
             const app = new App({
               appId: APP_ID,
               privateKey: PRIVATE_KEY,
